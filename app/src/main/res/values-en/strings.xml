@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Upload_01_website">Please enter the URL or media name you want to translate</string>
+    <string name="Upload_01_tv">Choose a language</string>
+    <string name="music_class">music</string>
+    <string name="movie_class">movie</string>
+    <string name="ebook_class">e-book</string>
+</resources>

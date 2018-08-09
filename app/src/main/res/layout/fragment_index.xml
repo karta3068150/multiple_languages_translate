@@ -1,0 +1,100 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/background_light"
+    tools:context="com.example.sunrise.multiple_languages_translate.Index"
+    >
+    <!--  android:clickable="true" 設定可點擊 , 讓整個頁面可點擊可讓穿透點擊BUG消失
+                android:background="@android:color/background_light" 利用背景把背後的Fragment覆蓋  -->
+    <LinearLayout
+        android:id="@+id/Index_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Index_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/image_upload"
+                android:gravity="bottom"
+                android:text="語言翻轉" />
+
+            <Button
+                android:id="@+id/Index_dictionary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/image_dictionary"
+                android:gravity="bottom"
+                android:text="個人詞彙典" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Index_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:background="@drawable/image_record"
+                android:text="翻譯紀錄" />
+
+            <Button
+                android:id="@+id/Index_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/talknlisten"
+                android:gravity="bottom"
+                android:text="聽說練習" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Index_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/image_test"
+                android:gravity="bottom"
+                android:text="小試身手" />
+
+            <Button
+                android:id="@+id/Index_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/image_score"
+                android:gravity="bottom"
+                android:text="成績查詢" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

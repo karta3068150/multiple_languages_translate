@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Upload_01_website">翻訳したいURLまたはメディア名を入力してください</string>
+    <string name="Upload_01_tv">言語を選択</string>
+    <string name="music_class">音楽</string>
+    <string name="movie_class">映画</string>
+    <string name="ebook_class">e-book</string>
+
+
+</resources>

@@ -1,0 +1,102 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@android:color/background_light"
+    tools:context="com.example.sunrise.multiple_languages_translate.SelectChapter">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/SelectChapter_search_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="請輸入媒材名稱"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/SelectChapter_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="搜尋" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/SelectChapter_music_class"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/SelectChapter_music_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:duplicateParentState="false"
+                android:text="@string/music_class" />
+
+            <RadioButton
+                android:id="@+id/SelectChapter_movie_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="@string/movie_class" />
+
+            <RadioButton
+                android:id="@+id/SelectChapter_ebook_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ebook_class" />
+        </RadioGroup>
+
+        <ListView
+            android:id="@+id/SelectChapter_listview"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/SelectChapter_prev"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="prev" />
+
+            <Button
+                android:id="@+id/SelectChapter_next"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:text="next"
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

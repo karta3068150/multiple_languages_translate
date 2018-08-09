@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Upload_01_website">번역 할 URL 또는 미디어 이름을 입력하십시오.</string>
+    <string name="Upload_01_tv">언어 선택</string>
+    <string name="music_class">음악</string>
+    <string name="movie_class">영화</string>
+    <string name="ebook_class">전자 책</string>
+</resources>
