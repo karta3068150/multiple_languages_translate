@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/test"
     android:layout_height="match_parent">
 
     <Button
@@ -12,7 +13,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="-50dp"
-        android:background="@drawable/rubbish"
+        android:background="@drawable/trash"
         android:visibility="visible" />
 
     <TextView
@@ -22,14 +23,15 @@
         android:layout_weight="1"
         android:paddingLeft="0dp"
         android:text="TextView"
-        android:textSize="50sp" />
+        android:textSize="30sp"
+        />
 
     <Button
         android:id="@+id/slied_right_image"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginRight="-50dp"
-        android:background="@drawable/rubbish"
+        android:background="@drawable/trash"
         android:visibility="visible" />
 
 </LinearLayout>

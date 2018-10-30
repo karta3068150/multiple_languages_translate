@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@drawable/bg14"
+    tools:context=".Situation">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorone"
+            android:text="情境演練-歌詞接唱"
+            android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
+            tools:paddingLeft="20dp"
+            tools:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="請選擇正確的歌詞接下去"
+            android:textAppearance="@android:style/TextAppearance.Holo.Large" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="林俊傑-小酒窩\n"
+                android:textSize="30dp"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionMode.Title"
+                tools:layout_marginLeft="10dp"
+                tools:layout_marginTop="20dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="小酒窩長睫毛是你最美的記號 我每天睡不著想念你的___"
+            android:textSize="30dp"
+            tools:layout_marginLeft="10dp" />
+
+        <LinearLayout
+            android:id="@+id/lay2"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            tools:layout_marginLeft="10dp">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <RadioButton
+                    android:id="@+id/rButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="味道"
+                    android:textSize="25dp" />
+
+                <RadioButton
+                    android:id="@+id/rButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="微笑"
+                    android:textSize="25dp" />
+
+                <RadioButton
+                    android:id="@+id/rButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="外套"
+                    android:textSize="25dp" />
+
+                <RadioButton
+                    android:id="@+id/rButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="手套"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="下一題" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

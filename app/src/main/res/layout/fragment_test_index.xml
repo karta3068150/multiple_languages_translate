@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@drawable/bg14"
+    tools:context=".TestIndex">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorone"
+            android:text="小試身手"
+
+            android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
+            tools:paddingLeft="20dp" />
+
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="請選擇下列測驗類型"
+            android:textSize="30dp"
+            tools:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/listening_test"
+                style="@android:style/Widget.Holo.Light.Button.Inset"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/test"
+                android:text="聽力測驗"
+                tools:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/content_mean"
+                style="@android:style/Widget.Holo.Light.Button.Inset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/test"
+                android:text="文意測驗"
+                tools:layout_marginBottom="10dp"
+                tools:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/volcabulary_choose"
+                style="@android:style/Widget.Holo.Light.Button.Inset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/test"
+                android:text="詞彙選擇"
+                tools:layout_marginBottom="10dp"
+                tools:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/situation_test"
+                style="@android:style/Widget.Holo.Light.Button.Inset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/test"
+                android:text="情境演練"
+                tools:layout_marginBottom="10dp"
+                tools:layout_marginTop="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

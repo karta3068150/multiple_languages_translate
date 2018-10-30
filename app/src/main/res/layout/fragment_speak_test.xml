@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@drawable/bg14"
+    tools:context=".SpeakTest">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textV10"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorone"
+            android:text="聽說練習"
+            android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
+            tools:paddingLeft="20dp"
+            tools:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#65707b"
+                android:text="Saury"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+                android:textColor="@color/colorwhite"
+                tools:layout_marginTop="50dp"
+                tools:padding="20dp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="熟悉度    89%"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#f14017" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="是否正確    是"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#2a19d1" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:background="@drawable/microphone"
+                tools:layout_marginTop="50dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

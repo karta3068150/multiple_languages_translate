@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true"
-    android:background="@android:color/background_light"
-    tools:context="com.example.sunrise.multiple_languages_translate.SelectChapter">
+    android:background="@drawable/bg14"
+    tools:context="com.example.sunrise.multiple_languages_translate.SelectChapter"
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -12,6 +13,17 @@
         android:layout_height="match_parent"
 
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/chapter_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorone"
+            android:text="個人詞彙典"
+            android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
+            android:textColor="@color/colorwhite"
+            tools:paddingBottom="20dp"
+            tools:paddingLeft="10dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,17 +35,18 @@
                 android:id="@+id/SelectChapter_search_word"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:ems="10"
-                android:hint="請輸入媒材名稱"
+                android:hint="please input media name"
                 android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/SelectChapter_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:text="搜尋" />
+                android:background="@drawable/search" />
 
         </LinearLayout>
 
@@ -50,7 +63,7 @@
                 android:layout_weight="1"
                 android:checked="false"
                 android:duplicateParentState="false"
-                android:text="@string/music_class" />
+                android:text="music" />
 
             <RadioButton
                 android:id="@+id/SelectChapter_movie_class"
@@ -58,14 +71,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="false"
-                android:text="@string/movie_class" />
+                android:text="movie" />
 
             <RadioButton
                 android:id="@+id/SelectChapter_ebook_class"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/ebook_class" />
+                android:text="e-book" />
         </RadioGroup>
 
         <ListView
@@ -82,16 +95,17 @@
 
             <Button
                 android:id="@+id/SelectChapter_prev"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="prev" />
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/pre" />
 
             <Button
                 android:id="@+id/SelectChapter_next"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="0dp"
-                android:text="next"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/next"
 
                 />
 

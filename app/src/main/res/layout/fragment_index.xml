@@ -2,96 +2,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clickable="true"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@android:color/background_light"
+    android:clickable="true"
+    android:background="@drawable/bg1"
     tools:context="com.example.sunrise.multiple_languages_translate.Index"
+
     >
     <!--  android:clickable="true" 設定可點擊 , 讓整個頁面可點擊可讓穿透點擊BUG消失
                 android:background="@android:color/background_light" 利用背景把背後的Fragment覆蓋  -->
     <LinearLayout
         android:id="@+id/Index_table"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
 
             <Button
                 android:id="@+id/Index_upload"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:background="@drawable/image_upload"
-                android:gravity="bottom"
-                android:text="語言翻轉" />
+                android:background="@drawable/translate1"
+                android:gravity="bottom" />
 
             <Button
                 android:id="@+id/Index_dictionary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:background="@drawable/image_dictionary"
-                android:gravity="bottom"
-                android:text="個人詞彙典" />
+                android:background="@drawable/dictionary1"
+                android:gravity="bottom" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/Index_record"
+                android:id="@+id/Index_vision_test"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:gravity="bottom"
-                android:background="@drawable/image_record"
-                android:text="翻譯紀錄" />
+                android:background="@drawable/vision"
+                android:gravity="bottom" />
 
             <Button
-                android:id="@+id/Index_test"
+                android:id="@+id/Index_listening_test"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:background="@drawable/talknlisten"
-                android:gravity="bottom"
-                android:text="聽說練習" />
+                android:background="@drawable/speak2"
+                android:gravity="bottom" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/Index_grade"
+                android:id="@+id/Index_quiz"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:background="@drawable/image_test"
-                android:gravity="bottom"
-                android:text="小試身手" />
+                android:background="@drawable/test1"
+                android:gravity="bottom" />
 
             <Button
                 android:id="@+id/Index_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:background="@drawable/image_score"
-                android:gravity="bottom"
-                android:text="成績查詢" />
+                android:background="@drawable/score1"
+                android:gravity="bottom" />
         </LinearLayout>
 
 

@@ -2,9 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:clickable="true"
-    android:background="@android:color/background_light"
+    android:background="@drawable/bg14"
     android:layout_height="match_parent"
-    tools:context="com.example.sunrise.multiple_languages_translate.Upload_01">
+    tools:context="com.example.sunrise.multiple_languages_translate.Upload_01"
+    >
     <!--  android:clickable="true" 設定可點擊 , 讓整個頁面可點擊可讓穿透點擊BUG消失
                 android:background="@android:color/background_light" 利用背景把背後的Fragment覆蓋  -->
     <RelativeLayout
@@ -16,7 +17,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorone"
+            android:text="語言翻轉"
+            android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
+            tools:paddingLeft="20dp"
+            tools:paddingTop="10dp" />
+
         <RadioGroup
+            android:id="@+id/Upload_01_RadioGroup"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:orientation="horizontal">
@@ -26,21 +38,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="音樂" />
+                android:checked="true"
+                android:tag="1"
+                android:text="music" />
 
             <RadioButton
                 android:id="@+id/Upload_01_movie"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="電影" />
+                android:checked="false"
+                android:tag="2"
+                android:text="movie" />
 
             <RadioButton
                 android:id="@+id/Upload_01_ebook"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="電子書" />
+                android:tag="3"
+                android:text="e-book" />
         </RadioGroup>
 
         <LinearLayout
@@ -55,23 +72,23 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="@string/Upload_01_website"
+                android:hint="please input text"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
 
-
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/Upload_01_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="進行翻譯!" />
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/original"
+                android:text="translate!!" />
         </LinearLayout>
     </LinearLayout>
     </RelativeLayout>

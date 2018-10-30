@@ -11,9 +11,8 @@
     <string name="Upload_01_website">請輸入欲翻譯之網址或媒材名稱</string>
     <string name="Upload_01_tv">請選擇語言</string>
     <string-array name="dictionary_word">
-        <item>安麗_music</item>
-        <item>飄向北方_music</item>
-        <item>復仇者聯盟_movie</item>
+        <item>七里香_music</item>
+        <item>鷹眼計畫_movie</item>
         <item>程式設計_ebook</item>
         <item>統計學_ebook</item>
         <item>浩劫重生_movie</item>
@@ -21,4 +20,5 @@
     <string name="music_class">音樂</string>
     <string name="movie_class">電影</string>
     <string name="ebook_class">電子書</string>
+    <string name="title_activity_mean_choose_test">mean_choose_test</string>
 </resources>

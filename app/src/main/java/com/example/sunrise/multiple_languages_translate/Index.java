@@ -1,6 +1,8 @@
 package com.example.sunrise.multiple_languages_translate;
 
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -41,6 +43,12 @@ public class Index extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         aaa();
+      //  ProgressDialog pd = ProgressDialog.show(getActivity(),"讀取中...","讀取中");
+//        public void onClick(View v) {
+//            Intent intent = new Intent();
+//            intent.setClass(MainActivity01.this , Page2.class);
+//            startActivity(intent);
+//        }
     }
 
     public Index() {
@@ -82,11 +90,12 @@ public void aaa (){
     index_table = (LinearLayout) getView().findViewById (R.id.Index_table);
     index_bt[0] = (Button)getView().findViewById (R.id.Index_upload);
     index_bt[1] = (Button)getView().findViewById (R.id.Index_dictionary);
-    index_bt[2] = (Button)getView().findViewById (R.id.Index_record);
-    index_bt[3] = (Button)getView().findViewById (R.id.Index_test);
-    index_bt[4] = (Button)getView().findViewById (R.id.Index_grade);
+    index_bt[2] = (Button)getView().findViewById (R.id.Index_vision_test);
+    index_bt[3] = (Button)getView().findViewById (R.id.Index_listening_test);
+    index_bt[4] = (Button)getView().findViewById (R.id.Index_quiz);
     index_bt[5] = (Button)getView().findViewById (R.id.Index_logout);
     DisplayMetrics metrics = new DisplayMetrics();
+
     getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
     //將按鈕大小依照手機螢幕大小劃分
     index_table.post(new Runnable(){
@@ -117,12 +126,63 @@ public void aaa (){
                                        public void onClick(View view) {
                                            transaction = manager.beginTransaction();
                                            Log.e("eee",""+manager.getFragments());
-                                           SelectChapter newFra=new SelectChapter();
-                                           transaction.replace(R.id.fragment,newFra,"SelectChapter").addToBackStack("SelectChapter");
+                                           Fragment newFra=new Dictionary_01();
+                                           Bundle bundle = new Bundle();
+                                           bundle.putString("features_type","Dictionary"); //使系統判別是由哪個功能進入
+                                           newFra.setArguments(bundle);
+                                           transaction.replace(R.id.fragment,newFra,"Dictionary_01").addToBackStack("Dictionary_01");
                                            transaction.commit();
                                        }
                                    }
     );
+    index_bt[2].setOnClickListener(new Button.OnClickListener() {
+                                       @Override
+                                       public void onClick(View view) {
+                                           transaction = manager.beginTransaction();
+                                           Log.e("eee",""+manager.getFragments());
+                                           Fragment newFra=new Dictionary_01();
+                                           Bundle bundle = new Bundle();
+                                           bundle.putString("features_type","Vision");  //使系統判別是由哪個功能進入
+                                           newFra.setArguments(bundle);
+                                           transaction.replace(R.id.fragment,newFra,"VisionTest").addToBackStack("VisionTest");
+                                           transaction.commit();
+                                       }
+                                   }
+    );
+    index_bt[3].setOnClickListener(new Button.OnClickListener() {
+                                       @Override
+                                       public void onClick(View view) {
+                                           transaction = manager.beginTransaction();
+                                           Log.e("eee",""+manager.getFragments());
+                                           ListeningPraticeChoose newFra=new ListeningPraticeChoose();
+                                           transaction.replace(R.id.fragment,newFra,"ListeningPraticeChoose").addToBackStack("ListeningPraticeChoose");
+                                           transaction.commit();
+                                       }
+                                   }
+    );
+    index_bt[4].setOnClickListener(new Button.OnClickListener() {
+                                       @Override
+                                       public void onClick(View view) {
+                                           transaction = manager.beginTransaction();
+                                           Log.e("eee",""+manager.getFragments());
+                                           TestIndex newFra=new TestIndex();
+                                           transaction.replace(R.id.fragment,newFra,"TestIndex").addToBackStack("TestIndex");
+                                           transaction.commit();
+                                       }
+                                   }
+    );
+    index_bt[5].setOnClickListener(new Button.OnClickListener() {
+                                       @Override
+                                       public void onClick(View view) {
+                                           transaction = manager.beginTransaction();
+                                           Log.e("eee",""+manager.getFragments());
+                                           Grade newFra=new Grade();
+                                           transaction.replace(R.id.fragment,newFra,"Grade").addToBackStack("Grade");
+                                           transaction.commit();
+                                       }
+                                   }
+    );
+
 
 }
     @Override

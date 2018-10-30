@@ -1,6 +1,10 @@
 package com.example.sunrise.multiple_languages_translate;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -42,11 +46,12 @@ public class Dictionary_02 extends Fragment {
     private FragmentManager manager; //負責管理Fragment
     private android.support.v4.app.FragmentTransaction transaction; // 進行交談的Fragment 變數
     private String[] all_user_save_translate  ;//使用者所有的翻譯單字
-    private   ArrayList<String> user_choice = new ArrayList<>();
+    private ArrayList<String>all_user_save_translate1 =new ArrayList<String>();//使用者所收藏的翻譯單字
+    private ArrayList<String> user_choice = new ArrayList<>();
     private ListView listView;
     //自定義的 ListView
     private SlideList adapter;
-
+    SQLite sq;
 
     private OnFragmentInteractionListener mListener;
 
@@ -80,13 +85,39 @@ public class Dictionary_02 extends Fragment {
     public void onViewCreated (View view, @Nullable Bundle savedInstanceState){
         TextView tv = (TextView) getView().findViewById(R.id.Dictionary_02_chapter);
         tv.setText(translate_name);
+        SQLite sqlite = new SQLite(getActivity());
+        Cursor c = null;
+        SQLiteDatabase db = sqlite.getWritableDatabase();
        // all_user_save_translate =  getResources().getStringArray(R.array.dictionary_word);
-        all_user_save_translate = new String []{"開心","同學","咖啡"};
-        user_choice.clear();
-        for(String s : all_user_save_translate){
-            user_choice.add(s);
+        //三年級應修改部分  從資料庫裡撈出以收藏詞彙
+        /*Cursor c=sq.getReadableDatabase().rawQuery(String.format("SELECT * FROM %s",translate_name),null);
+        c.moveToFirst();
+        all_user_save_translate1.clear();
+        for(int i=0;i<c.getCount();i++){
+            all_user_save_translate1.add(c.getString(0));
+            c.moveToNext();
+        }*/
+
+        c=db.rawQuery("SELECT * FROM "+translate_name,null);
+        //all_user_save_translate = new String []{"窗外","麻雀","秋刀魚","電線桿","夏天","了解","唯一"};
+        all_user_save_translate = new String[c.getCount()];
+        c.moveToFirst();
+        // 讀取表格裡所有詞彙
+        for (int i = 0 ; i < c.getCount() ; i++){
+            all_user_save_translate[i] = c.getString(0);
+            c.moveToNext();
         }
 
+        //三年級應修改部分 -------------------------------------------------- end
+     /*   user_choice.clear();
+        for(int i=0;i<all_user_save_translate1.size();i++){
+            user_choice.add(all_user_save_translate1.get(i).toString());
+        }*/
+     //  -----------------學長原本的------------
+              for(String s : all_user_save_translate){
+                       user_choice.add(s);
+                  }
+    //      ----------------end-------------------------
         listView = (ListView)getView().findViewById(R.id.Dictionary_02_listview);
         adapter = new SlideList(getActivity() , user_choice , Dictionary_02.this);
         listView.setAdapter(adapter);
@@ -105,6 +136,7 @@ public class Dictionary_02 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -112,6 +144,7 @@ public class Dictionary_02 extends Fragment {
         manager = getActivity().getSupportFragmentManager();
         //取得傳過來的章節名稱 利用章節名稱尋找資料庫
         translate_name = getArguments().getString("chapter");
+
     }
 
     @Override
@@ -158,4 +191,35 @@ public class Dictionary_02 extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
+}
+
+
+class SQLite extends SQLiteOpenHelper {
+    public static final String DATABASE_NAME="vocabulary";
+    public static final int VERSION=1;
+
+    //private final static String Result = "result";
+    public SQLite(Context context) {
+        super(context, DATABASE_NAME, null, VERSION);
+
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+
+    }
+    public void createTable(SQLiteDatabase db,String tbName){
+        db.execSQL("CREATE TABLE IF NOT EXISTS "+tbName+
+                "(tv VARCHAR NOT NULL,"+"pinyin VARCHAR NOT NULL,"+"customer_language VARCHAR NOT NULL,"+"sentence_origin VARCHAR NOT NULL,"
+                +"sentence_custom NOT NULL);");
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
+    }
+
+
 }
